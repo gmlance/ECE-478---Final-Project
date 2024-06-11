@@ -1,0 +1,4 @@
+FROM python:3.9-slim
+RUN pip install scapy
+COPY attacker_script.py /attacker_script.py
+CMD ["python", "/attacker_script.py"]
