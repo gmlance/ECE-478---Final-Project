@@ -1,0 +1,9 @@
+version: '3'
+services:
+  attacker:
+    build: ./attacker
+    network_mode: host
+  victim:
+    build: ./victim
+    network_mode: host
+    entrypoint: ["tail", "-f", "/dev/null"]
